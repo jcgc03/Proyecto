@@ -11,11 +11,11 @@ public Biblioteca(String nombre) {
         coleccionLibros = new Vector();
 
 }
-void añadirLibro(Libro libro) {
+public void añadirLibro(Libro libro) {
     coleccionLibros.add(libro); 
      }
 
-    void listarLibros() {
+    public void listarLibros() {
         for (int i = 0; i < coleccionLibros.size(); i++) {
             Libro libro = (Libro) coleccionLibros.elementAt(i); 
         libro.imprimir();
