@@ -3,7 +3,7 @@ import java.sql.Time;
 
 public class Cita {
 
-    Date fecha = new Date(2023, 5, 3);
+    Date fecha;
     public Time hora;
     public String tipoCita;
     public int consultorio;

@@ -1,14 +1,28 @@
 import java.sql.Date;
+import java.util.Vector;
 
 public class Paciente {
 
     public String nombre;
     public String apellido;
     public String identificacion;
-    public Date fechaNacimiento;
+    public String fechaNacimiento;
     public String direccion;
     public String telefono;
     public String correo;
+    Vector listaPacientes;
+
+    public Paciente(String nombre, String apellido, String identificacion, String fechaNacimiento, String direccion,
+            String telefono, String correo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.identificacion = identificacion;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.correo = correo;
+        listaPacientes = new Vector();
+    }
 
     public String getNombre() {
         return nombre;
@@ -34,11 +48,11 @@ public class Paciente {
         this.identificacion = identificacion;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -66,41 +80,17 @@ public class Paciente {
         this.correo = correo;
     }
 
-    void añadirMedico(Medico medico) {
-        listaMedicos.add(medico);
+    void añadirPaciente(Paciente paciente) {
+        listaPacientes.add(paciente);
     }
 
-    void listarMedico() {
-        for (int i = 0; i < listaMedicos.size(); i++)
-            ;
-        {
-            Medico medlist = (Medico) listaMedicos.elementAt(i);
-            System.out.println(medlist.getNombre());
+    void listarPaciente() {
+        for (int i = 0; i < listaPacientes.size(); i++) {
+            Paciente paclist = (Paciente) listaPacientes.elementAt(i);
+            System.out.println("PACIENTES: ");
+            System.out.print(paclist.getNombre() + " ");
+            System.out.print(paclist.getApellido());
+            System.out.println(" ");
         }
     }
-
-    public String añadirPaciente() {
-
-    }
-
-    public String actualizarPaciente() {
-
-    }
-
-    public String eliminarPaciente() {
-
-    }
-
-    public String pedirCita() {
-
-    }
-
-    public String cancelarCita() {
-
-    }
-
-    public String reclamarMedicamento() {
-
-    }
-
 }
