@@ -1,6 +1,3 @@
-import java.sql.Date;
-import java.sql.Time;
-
 public class Cita {
 
     public String fecha;
@@ -120,16 +117,6 @@ public class Cita {
     public void setMedicamento(Medicamento newMedicamento) {
         this.medicamento = newMedicamento;
     }
-
-    // public String asignarCita(String fecha, String hora, String tipoCita, String
-    // consultorio, String nombreClinica,
-    // String direccionClinica) {
-    // return "Para el dia " + fecha + " a las " + hora + " se le asigna una cita de
-    // tipo " + tipoCita
-    // + " en el consultorio " + consultorio + " en la clinica " + nombreClinica + "
-    // con la direccion "
-    // + direccionClinica;
-    // }
 
     public void asignarCita() {
         System.out.println(String.format(

@@ -1,4 +1,3 @@
-import java.sql.Date;
 import java.util.Vector;
 
 public class Paciente {

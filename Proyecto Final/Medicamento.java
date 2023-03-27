@@ -73,18 +73,4 @@ public class Medicamento {
         }
     }
 
-    public String actualizarMedicamento() {
-        return "hola";
-
-    }
-
-    public String eliminarMedicamento() {
-        return "hola";
-
-    }
-
-    public String consultarStock(int codigo, String nombre, int existencias) {
-        return "hola";
-
-    }
 }
