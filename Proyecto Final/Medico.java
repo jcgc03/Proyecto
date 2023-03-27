@@ -97,7 +97,6 @@ public class Medico {
 
         for (int i = 0; i < listaMedicos.size(); i++) {
             Medico medlist = (Medico) listaMedicos.elementAt(i);
-            System.out.println("MEDICOS: ");
             System.out.print(medlist.getNombre() + " ");
             System.out.print(medlist.getApellido() + " ");
             System.out.println(" ");

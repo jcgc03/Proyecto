@@ -87,7 +87,7 @@ public class Paciente {
     void listarPaciente() {
         for (int i = 0; i < listaPacientes.size(); i++) {
             Paciente paclist = (Paciente) listaPacientes.elementAt(i);
-            System.out.println("PACIENTES: ");
+
             System.out.print(paclist.getNombre() + " ");
             System.out.print(paclist.getApellido());
             System.out.println(" ");

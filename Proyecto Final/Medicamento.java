@@ -56,7 +56,8 @@ public class Medicamento {
     void listarMedicamento() {
         for (int i = 0; i < listaMedicamentos.size(); i++) {
             Medicamento mediclist = (Medicamento) listaMedicamentos.elementAt(i);
-            System.out.println("MEDICAMENTOS: ");
+            // System.out.println("MEDICAMENTOS: ");
+            System.out.print("(" + mediclist.getCodigo() + ")" + " ");
             System.out.println(mediclist.getNombre());
         }
     }
