@@ -1,20 +1,15 @@
-import java.util.Vector;
-import java.util.Scanner;
-
 public class Medicamento {
 
     public String codigo;
     public String nombre;
     public int dosificacion;
     public int existencias;
-    Vector listaMedicamentos;
 
     public Medicamento(String codigo, String nombre, int dosificacion, int existencias) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.dosificacion = dosificacion;
         this.existencias = existencias;
-        listaMedicamentos = new Vector();
     }
 
     public String getCodigo() {
@@ -47,30 +42,6 @@ public class Medicamento {
 
     public void setExistencias(int existencias) {
         this.existencias = existencias;
-    }
-
-    void añadirMedicamento(Medicamento medicamento) {
-        listaMedicamentos.add(medicamento);
-    }
-
-    void listarMedicamento() {
-        for (int i = 0; i < listaMedicamentos.size(); i++) {
-            Medicamento mediclist = (Medicamento) listaMedicamentos.elementAt(i);
-            // System.out.println("MEDICAMENTOS: ");
-            System.out.print("(" + mediclist.getCodigo() + ")" + " ");
-            System.out.println(mediclist.getNombre());
-        }
-    }
-
-    void buscarMedicamento() {
-        Scanner sc = new Scanner(System.in);
-        String codigoMedicamento = sc.next();
-        for (int i = 0; i < listaMedicamentos.size(); i++) {
-            Medicamento mediclist = (Medicamento) listaMedicamentos.elementAt(i);
-            if (mediclist.getCodigo().equals(codigoMedicamento)) {
-                System.out.println("Hay " + mediclist.getExistencias() + " existencias de este medicamento en Stock");
-            }
-        }
     }
 
 }

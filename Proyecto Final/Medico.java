@@ -1,5 +1,3 @@
-import java.util.Vector;
-
 public class Medico {
 
     public String nombre;
@@ -10,7 +8,6 @@ public class Medico {
     public String telefono;
     public String correo;
     public String nombreEspecialidad;
-    Vector listaMedicos;
 
     public Medico(String nombre, String apellido, String identiicacion, String tarjetaProfesional, String direccion,
             String telefono, String correo, String nombreEspecialidad) {
@@ -22,7 +19,7 @@ public class Medico {
         this.telefono = telefono;
         this.correo = correo;
         this.nombreEspecialidad = nombreEspecialidad;
-        listaMedicos = new Vector();
+
     }
 
     public String getNombre() {
@@ -87,20 +84,6 @@ public class Medico {
 
     public void setNombreEspecialidad(String nombreEspecialidad) {
         this.nombreEspecialidad = nombreEspecialidad;
-    }
-
-    void añadirMedico(Medico medico) {
-        listaMedicos.add(medico);
-    }
-
-    void listarMedico() {
-
-        for (int i = 0; i < listaMedicos.size(); i++) {
-            Medico medlist = (Medico) listaMedicos.elementAt(i);
-            System.out.print(medlist.getNombre() + " ");
-            System.out.print(medlist.getApellido() + " ");
-            System.out.println(" ");
-        }
     }
 
 }

@@ -1,5 +1,3 @@
-import java.util.Vector;
-
 public class Paciente {
 
     public String nombre;
@@ -9,7 +7,6 @@ public class Paciente {
     public String direccion;
     public String telefono;
     public String correo;
-    Vector listaPacientes;
 
     public Paciente(String nombre, String apellido, String identificacion, String fechaNacimiento, String direccion,
             String telefono, String correo) {
@@ -20,7 +17,7 @@ public class Paciente {
         this.direccion = direccion;
         this.telefono = telefono;
         this.correo = correo;
-        listaPacientes = new Vector();
+
     }
 
     public String getNombre() {
@@ -79,17 +76,4 @@ public class Paciente {
         this.correo = correo;
     }
 
-    void añadirPaciente(Paciente paciente) {
-        listaPacientes.add(paciente);
-    }
-
-    void listarPaciente() {
-        for (int i = 0; i < listaPacientes.size(); i++) {
-            Paciente paclist = (Paciente) listaPacientes.elementAt(i);
-
-            System.out.print(paclist.getNombre() + " ");
-            System.out.print(paclist.getApellido());
-            System.out.println(" ");
-        }
-    }
 }
